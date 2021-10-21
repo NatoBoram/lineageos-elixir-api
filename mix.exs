@@ -24,7 +24,7 @@ defmodule LineageOS.MixProject do
     [
       {:httpoison, "~> 1.8"},
       {:poison, "~> 5.0"},
-      {:tzdata, "~> 1.1"}
+      {:tzdata, "~> 0.1.8", override: true}
     ]
   end
 
