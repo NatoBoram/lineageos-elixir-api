@@ -1,14 +1,12 @@
-name: Elixir CI
+name: GitHub Pages
 
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]
 
 jobs:
   build:
-    name: Build and test
+    name: Build and publish
     runs-on: ubuntu-latest
 
     steps:
@@ -30,5 +28,21 @@ jobs:
       - name: Install dependencies
         run: mix deps.get
 
-      - name: Run tests
-        run: mix test
+      - name: Deploy
+        run: |
+          # Generate docs
+          mix docs
+
+          # Setup
+          cd doc
+          git init --initial-branch gh-pages
+          git remote add origin git@github.com:NatoBoram/lineageos-elixir-api.git
+          git config user.name "GitHub Pages"
+          git config user.email "nato.boram+lineageos-elixir-api@gmail.com"
+          eval `ssh-agent -s`
+          ssh-add - <<< '${{ secrets.GH_PAGES_SSH }}'
+
+          # Push
+          git add .
+          git commit -m "mix docs"
+          git push --set-upstream origin gh-pages -f

@@ -5,10 +5,16 @@ defmodule LineageOS.MixProject do
     [
       app: :lineageos,
       version: "0.1.0",
-      elixir: "~> 1.12",
+      elixir: "~> 1.13.3",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      escript: escript()
+      escript: escript(),
+
+      # Docs
+      name: "LineageOS API",
+      source_url: "https://github.com/NatoBoram/lineageos-elixir-api",
+      homepage_url: "https://natoboram.github.io/lineageos-elixir-api",
+      docs: []
     ]
   end
 
@@ -24,7 +30,8 @@ defmodule LineageOS.MixProject do
     [
       {:httpoison, "~> 1.8"},
       {:poison, "~> 5.0"},
-      {:tzdata, "~> 0.1.8", override: true}
+      {:tzdata, "~> 0.1.8", override: true},
+      {:ex_doc, "~> 0.27", only: :dev, runtime: false}
     ]
   end
 
