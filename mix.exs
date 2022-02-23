@@ -14,7 +14,10 @@ defmodule LineageOS.MixProject do
       name: "LineageOS API",
       source_url: "https://github.com/NatoBoram/lineageos-elixir-api",
       homepage_url: "https://natoboram.github.io/lineageos-elixir-api",
-      docs: []
+      docs: [
+        authors: ["Nato Boram"],
+        extras: ["README.md", "LICENSE.md"]
+      ]
     ]
   end
 
