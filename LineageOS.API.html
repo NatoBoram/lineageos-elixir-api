@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.28.1">
+    <meta name="project" content="LineageOS API v0.1.0">
+
+      <meta name="author" content="Nato Boram">
+
+    <title>LineageOS.API — LineageOS API v0.1.0</title>
+    <link rel="stylesheet" href="dist/elixir-b2f127a8512920f0fe13.css" />
+
+    <script src="dist/sidebar_items-9597d448db.js"></script>
+
+      <script src="docs_config.js"></script>
+
+    <script async src="dist/app-073abeeda7b7e6d5d7e9.js"></script>
+
+
+  </head>
+  <body data-type="modules">
+    <script>
+
+      try {
+        if (localStorage.getItem('night-mode') === 'true') {
+          document.body.classList.add('night-mode');
+        }
+      } catch (error) { }
+    </script>
+
+<div class="main">
+
+
+<section class="sidebar">
+  <button class="sidebar-button sidebar-toggle" aria-label="toggle sidebar">
+    <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+  </button>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button" aria-label="Submit Search">
+      <i class="ri-search-2-line" aria-hidden="true" title="Submit search"></i>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button" aria-label="Cancel Search">
+      <i class="ri-close-line ri-lg" aria-hidden="true" title="Cancel search"></i>
+    </button>
+    <label class="search-label">
+      <p class="sr-only">Search</p>
+      <input name="q" type="text" class="search-input" placeholder="Search..." aria-label="Input your search terms" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
+
+    <div class="sidebar-projectDetails">
+      <a href="https://natoboram.github.io/lineageos-elixir-api" class="sidebar-projectName" translate="no">
+LineageOS API
+      </a>
+      <strong class="sidebar-projectVersion" translate="no">
+        v0.1.0
+      </strong>
+    </div>
+    <ul class="sidebar-listNav">
+      <li><a id="extras-list-link" href="#full-list">Pages</a></li>
+
+        <li><a id="modules-list-link" href="#full-list">Modules</a></li>
+
+
+    </ul>
+  </div>
+
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+<h1>
+<button class="settings display-settings">
+  <i class="ri-settings-3-line"></i>
+  <span class="sr-only">Settings</span>
+</button>
+
+
+    <a href="https://github.com/NatoBoram/lineageos-elixir-api/blob/main/lib/api.ex#L1" title="View Source" class="view-source" rel="help">
+      <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+      <span class="sr-only">View Source</span>
+    </a>
+
+  <span translate="no">LineageOS.API</span> 
+  <small class="app-vsn" translate="no">(LineageOS API v0.1.0)</small>
+
+</h1>
+
+
+  <section id="moduledoc">
+<p><code class="inline">API</code> is an interface to the LineageOS API.</p>
+  </section>
+
+
+  <section id="summary" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#summary">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+      Summary
+    </h1>
+
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:builds/0" translate="no">builds()</a>
+
+        </div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#t:devices/0" translate="no">devices()</a>
+
+        </div>
+
+      </div>
+
+  </div>
+
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#download/1" translate="no">download(build)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p><code class="inline">download</code> downloads the given build.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getBuilds/1" translate="no">getBuilds(device)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p><code class="inline">getBuilds</code> returns a list of builds for a given device.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getDevices/0" translate="no">getDevices()</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p><code class="inline">getDevices</code> returns a list of devices that are supported by the LineageOS team.</p></div>
+
+      </div>
+
+      <div class="summary-row">
+        <div class="summary-signature">
+          <a href="#getLatestBuild/1" translate="no">getLatestBuild(deviceName)</a>
+
+        </div>
+
+          <div class="summary-synopsis"><p><code class="inline">getLatestBuild</code> returns the latest build for a given device.</p></div>
+
+      </div>
+
+  </div>
+
+  </section>
+
+
+  <section id="types" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#types">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+Types
+    </h1>
+    <div class="types-list">
+<section class="detail" id="t:builds/0">
+
+  <div class="detail-header">
+    <a href="#t:builds/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">builds()</h1>
+
+      <a href="https://github.com/NatoBoram/lineageos-elixir-api/blob/main/lib/api.ex#L9" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre translate="no">builds() :: [LineageOS.Build.t()]</pre>
+
+      </div>
+
+
+  </section>
+</section>
+<section class="detail" id="t:devices/0">
+
+  <div class="detail-header">
+    <a href="#t:devices/0" class="detail-link" title="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <h1 class="signature" translate="no">devices()</h1>
+
+      <a href="https://github.com/NatoBoram/lineageos-elixir-api/blob/main/lib/api.ex#L10" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre translate="no">devices() :: %{required(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) =&gt; <a href="#t:builds/0">builds</a>()}</pre>
+
+      </div>
+
+
+  </section>
+</section>
+
+    </div>
+  </section>
+
+  <section id="functions" class="details-list">
+    <h1 class="section-heading">
+      <a class="hover-link" href="#functions">
+        <i class="ri-link-m" aria-hidden="true"></i>
+        <span class="sr-only">Link to this section</span>
+      </a>
+Functions
+    </h1>
+    <div class="functions-list">
+<section class="detail" id="download/1">
+
+  <div class="detail-header">
+    <a href="#download/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">download(build)</h1>
+
+      <a href="https://github.com/NatoBoram/lineageos-elixir-api/blob/main/lib/api.ex#L47" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre translate="no">download(Build.t()) ::
+  :ok | {:error, <a href="https://hexdocs.pm/elixir/File.html#t:posix/0">File.posix</a>()} | {:error, <a href="https://hexdocs.pm/httpoison/1.8.0/HTTPoison.Response.html#t:t/0">HTTPoison.Response.t</a>()}</pre>
+
+      </div>
+
+<p><code class="inline">download</code> downloads the given build.</p>
+  </section>
+</section>
+<section class="detail" id="getBuilds/1">
+
+  <div class="detail-header">
+    <a href="#getBuilds/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getBuilds(device)</h1>
+
+      <a href="https://github.com/NatoBoram/lineageos-elixir-api/blob/main/lib/api.ex#L41" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre translate="no">getBuilds(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) :: <a href="#t:builds/0">builds</a>()</pre>
+
+      </div>
+
+<p><code class="inline">getBuilds</code> returns a list of builds for a given device.</p>
+  </section>
+</section>
+<section class="detail" id="getDevices/0">
+
+  <div class="detail-header">
+    <a href="#getDevices/0" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getDevices()</h1>
+
+      <a href="https://github.com/NatoBoram/lineageos-elixir-api/blob/main/lib/api.ex#L19" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre translate="no">getDevices() :: <a href="#t:devices/0">devices</a>()</pre>
+
+      </div>
+
+<p><code class="inline">getDevices</code> returns a list of devices that are supported by the LineageOS team.</p>
+  </section>
+</section>
+<section class="detail" id="getLatestBuild/1">
+
+  <div class="detail-header">
+    <a href="#getLatestBuild/1" class="detail-link" title="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <h1 class="signature" translate="no">getLatestBuild(deviceName)</h1>
+
+      <a href="https://github.com/NatoBoram/lineageos-elixir-api/blob/main/lib/api.ex#L63" class="view-source" rel="help" title="View Source">
+       <i class="ri-code-s-slash-line" aria-hidden="true"></i>
+       <span class="sr-only">View Source</span>
+     </a>
+
+
+  </div>
+
+  <section class="docstring">
+
+      <h2>Specs</h2>
+      <div class="specs">
+
+          <pre translate="no">getLatestBuild(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) :: Build.t()</pre>
+
+      </div>
+
+<p><code class="inline">getLatestBuild</code> returns the latest build for a given device.</p>
+  </section>
+</section>
+
+    </div>
+  </section>
+
+      <footer class="footer">
+
+        <p>
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.28.1) for the
+          <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+
+
+  </body>
+</html>
